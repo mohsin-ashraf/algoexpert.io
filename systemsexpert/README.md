@@ -1,14 +1,19 @@
-### Introduction
+# Systems Expert
+
+
+## Introduction
 
 Where the coding interview serves primarily as an assessment of your problem-solving ability, the systems design interview is a test of your engineering knowledge veiled behind the facade of an open-ended design question.
 
-### What Are Design Fundamentals?
+
+## What Are Design Fundamentals?
 
 Building scalable, production-ready applications is both art and science. Science, in that it requires knowledge of many topics in computer engineering; art, in that it demands an eye for making smart design choices and piecing together the right technologies.
 
 Master both disciplines and you, too, can become a Systems Expert.
 
-### Client Server Model
+
+## Client-Server Model
 
 A client is a thing that talks to servers. A server is a thing that talks to clients. The client—server model is a thing made up of a bunch of clients and servers talking to one another.
 
@@ -46,3 +51,46 @@ Helpful Resource
 1. [Netcat (nc) Command with examples](https://linuxize.com/post/netcat-nc-command-with-examples)
 2. [Netcat (nc) tutorial point](https://www.tutorialspoint.com/unix_commands/nc.htm)
 3. [Private IP address lookup](https://phoenixnap.com/kb/how-to-find-ip-address-linux#ftoc-heading-5)
+
+
+## Storage
+
+**Key Terms**
+
+_Databases_:Databases are programs that either us disk or memory to do 2 core things: **record** data and **query** data. In general, they are themselves servers that are long lived and interact the rest of your service through network calls, with protocols on top of TCP or even HTTP.
+
+Some databases only keep records in memory, and the users of such database are aware of the fact that those records may be lost forever if the machine goes down or the process dies.
+
+For the most part, the databases need the persistence of those records, and thus cannot use memory. This means that you have to write your data to disk. Anything written on the disk will remain through power loss or network partitions, so that's what is used to keep permanent records.
+
+Since the machines die often in a large scale system, special disk partitions or volumes are used by the database processes, and those volumes can get recovered even if the machines were to go down permanently.
+
+_Disk_: Usually refers to either **HDD (hard disk drive)** or **SSD (solid state drive)**. Data written to the disk will persist through power failures and general machine crashes. Disk is also referred to as **non-volatile storage**
+
+SSD is far faster than HDD but also far more expensive from a financial point of view. Because of that, HDD will typically be used for the data that is rarely accessed or updated, but that's stored for a long time, and SSD will be used for the data which will be frequently accessed or updated.
+
+_Memory_: Short for **Random Access Memory (RAM)**. Data stored in the memory will be lost when the process which wrote the data dies.
+
+_Persistent Storage_: Usually refers to disk, but in general it is any for of storage that presists if the process in charge of managing it dies.
+
+
+**Example**
+
+This lesson comes with an [example](./005-storage/) explaining data stored in the memory and on the disk. The example is implemented using the nodejs for explaining how the memory data is not presistent when the server dies and the disk data is, even if you turn your machine off and then turn it back on.
+
+Install the dependencies of the application using `npm install` and run the application using `node server.js`.
+
+**Memory Endpoints**
+```
+curl localhost:3000/memory/foo --header 'Content-Type: application/json' --data '{"data": "This is some data in memory"}'
+curl localhost:3000/memory/foo -w "\n"
+curl localhost:3000/memory/bar -w "\n"
+```
+
+
+**Disk Endpoints**
+```
+curl localhost:3000/disk/foo --header 'Content-Type: application/json' --data '{"data": "This is some data in disk"}'
+curl localhost:3000/disk/foo -w "\n"
+curl localhost:3000/disk/bar -w "\n"
+```
