@@ -53,6 +53,52 @@ Helpful Resource
 3. [Private IP address lookup](https://phoenixnap.com/kb/how-to-find-ip-address-linux#ftoc-heading-5)
 
 
+
+## Network Protocols
+
+**Key Terms**
+
+_Protocol_: A set of agreed upon rules for two parties to interact with each other.
+
+_IP_: Stands for **Internet Protocol**. This network protocol outlines how almost all machine-to-machine communications should happen in the world. Other protocols like **TCP**, **UDP**, and **HTTP** are built on top of IP.
+
+_TCP_: Network protocol built on top of the Internet Protocol (IP). Allows for ordered, reliable data delivery between machines over the public internet by createing **connection**.
+
+TCP is usually implemened in the kernel, which exposes **sockets** to applications that they cna use to stream data through an open connection.
+
+_HTTP_: The **Hyper Text Transfer Protocol** is a very common network protocol implemented on top of TCP. Clients make HTTP requests, and servers respond with the response.
+Requests typically have the following schema:
+```
+host: string (example: algoexpert.io)
+port: integer (example: 80 or 433)
+method: string (example: GET, POST, PUT, DELETE, OPTIONS or PATCH)
+headers: pair list (example: "Content-Type" => "application/json")
+body: opaque sequence of bytes
+```
+Responses typically have the following schema:
+```
+status code: integer (example: 300, 401)
+headers: pair list (example: "Content-Length" => 12345)
+body: opaque sequence of bytes
+```
+
+_IP Packet_: Sometimes more broadly referred to as just a (network) **packet**, an IP packet is effectively the smallest unit used to describe data being sent over **IP**, aside from the bytes. An IP packed consists of:
+
+- an **IP header**, which contains the source and destination **IP addresses** as well as other information related to the network.
+- a **payload**, which is just the data being sent over the network.
+
+**Example**
+
+This lesson comes with a very simple [example](./004-network-protocols) in which the request headers are being printed when someone makes a request to the server.
+
+Helpful Resource
+1. [IP Address](https://www.kaspersky.com/resource-center/definitions/what-is-an-ip-address)
+2. [How TCP Works](https://www.ionos.com/digitalguide/server/know-how/introduction-to-tcp/)
+3. [What is TCP](https://www.fortinet.com/resources/cyberglossary/tcp-ip#:~:text=TCP%20organizes%20data%20so%20that,remains%20live%20until%20communication%20begins.)
+4. [What is HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+5. [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+
 ## Storage
 
 **Key Terms**
