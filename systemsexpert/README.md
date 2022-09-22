@@ -140,3 +140,22 @@ curl localhost:3000/disk/foo --header 'Content-Type: application/json' --data '{
 curl localhost:3000/disk/foo -w "\n"
 curl localhost:3000/disk/bar -w "\n"
 ```
+
+
+## Latency and Throughput
+
+**Key Terms**
+
+_Latency_: The time it takes for a certain operation to complete in a system. Most often this measure is a time duration, like milliseconds or seconds. You should know these orders of magnitude:
+
+- Reading 1MB from RAM 250 microseconds
+- Reading 1MB from SSD 1000 microseconds
+- Reading 1MB from over Network 10,000 microseconds
+- Reading 1MB from HDD 20,000 microseconds
+- inter-Continental Round Trip:  150,000 microseconds
+
+_Throughput_: The number of operations that a system can handle properly per time unit. For instance the throughput of a server can often be measured in requests per seconds (RPS or QPS).
+
+
+Helpful Resouces
+1. [Latency and Throughput](https://networkshardware.com/throughput-vs-latency/)
