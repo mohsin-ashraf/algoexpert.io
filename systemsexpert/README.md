@@ -159,3 +159,31 @@ _Throughput_: The number of operations that a system can handle properly per tim
 
 Helpful Resouces
 1. [Latency and Throughput](https://networkshardware.com/throughput-vs-latency/)
+
+
+## Availability
+
+**Key Terms**
+
+_Availability_: The odds of a particular server or service being up and running at any point in time, usually measured in percentages. A server that has 99% availability will be operational 99% of the time (this would be described as having two **nines** of availability).
+
+_High Availability_: Used to describe systems that have particularly high levels of availability, typically 5 nines or more; sometimes abbreviated "HA".
+
+_Nines_: Typically refers to percentages of uptime. For example, 5 nines of availability means an uptime of 99.999% of the time. Below are the downtimes expected per year depending on those 9s:
+
+```
+- 99% (two 9s): 87.7 hours
+- 99.9% (three 9s): 8.8 hours
+- 99.99%: 52.6 minutes
+- 99.999%: 5.3 minutes
+```
+
+_Redundancy_: The process of replicating parts of a system in an effort to make it more reliable.
+
+_SLA_: Short for "service-level agreement", an SLA is a collection of guarantees given to a customer by a service provider. SLAs typically make guarantees on a system's availability, amongst other things. SLA are made up of one or multiple SLOs.
+
+_SLO_: Short for "service-level objective", an SLO is a guarantee given to a customer by a service provider. SLOs typically  make guarantees on systems's availablity, amongst other things. SLOs constitute an SLA.
+
+Helpful Resouces
+1. [Redundancy](https://www.digitalocean.com/community/tutorials/what-is-high-availability)
+2. [Nines of availability](https://en.wikipedia.org/wiki/High_availability)
