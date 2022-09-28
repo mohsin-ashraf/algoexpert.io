@@ -215,3 +215,14 @@ Helpful Resources
 4. [Caching: system design interview concepts (6 of 9)](https://igotanoffer.com/blogs/tech/caching-system-design-interview)
 5. [Cache Write Configurations](https://open-cas.github.io/cache_configuration.html#:~:text=Write%2DAround%20is%20similar%20to,not%20often%20subsequently%20re%2Dread.)
 6. [Example](./008-caching)
+
+## Proxies
+
+**Key Terms**
+
+_Forward Proxy_: A server that sists between a client and servers and acts on behalf of the client, typically used to mask the client's identity (IP Address). Note that forward proxies are often referred to as just proxies.
+
+_Reverse Proxy_: A server that sits between clients and servers and acts on behalf of the servers, typicall used for logging, load balancing or caching.
+
+Helpful Resources.
+1. [What is proxy server? and how it works](https://www.fortinet.com/resources/cyberglossary/proxy-server)
