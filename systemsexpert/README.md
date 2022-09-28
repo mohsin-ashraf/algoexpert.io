@@ -214,3 +214,4 @@ Helpful Resources
 3. [System Design Basics: Getting started with Caching](https://towardsdatascience.com/system-design-basics-getting-started-with-caching-c2c3e934064a)
 4. [Caching: system design interview concepts (6 of 9)](https://igotanoffer.com/blogs/tech/caching-system-design-interview)
 5. [Cache Write Configurations](https://open-cas.github.io/cache_configuration.html#:~:text=Write%2DAround%20is%20similar%20to,not%20often%20subsequently%20re%2Dread.)
+6. [Example](./008-caching)
