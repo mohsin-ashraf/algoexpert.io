@@ -187,3 +187,31 @@ _SLO_: Short for "service-level objective", an SLO is a guarantee given to a cus
 Helpful Resouces
 1. [Redundancy](https://www.digitalocean.com/community/tutorials/what-is-high-availability)
 2. [Nines of availability](https://en.wikipedia.org/wiki/High_availability)
+
+
+## Caching
+
+**Key Terms**
+
+_Cache_: A piece of software or hardware that stores data, typically meant to retrieve that data fastger than otherwise.
+
+Caches are often used to store responses to the network requests as well as results of computationally-long operations
+
+Note that data in a cache can become **stale** if the main source of truth for that data (i.e the main database behind the cache) gets updated and the cache doesn't
+
+_Cache Hit_: When requested data is found in a cache.
+_Cache Miss_: When the requested data could have been found in a cache but isn't. This is typically used to refer to a negative consequence of a system failure or of a poor design choice. For example:
+
+_If a server goes down, our load balancer will have to forward requests to a new server, which will be result in cache misses._
+
+_Cache Eviction Policy_: The policy by which values get evicted or removed from a cache. Papular cache eviction policies include **LRU** (least-recently used), **FIFO** (first in first out), and **LFU** (least-frequently used).
+
+_Content Deliver Network_: A **CDN** is a third-party service that acts like a cache for your servers. Sometimes, web applications can be slow for users in a particular region if your servers are located only in another region. A CDN has servers all around the world, meaning that the latency to a CND's servers will almost always be far better than the latency to your servers. A CDN's servers are often referred to as **PoPs** (Points of Presence). Two of the most popular CDNs are **CloudFlare** and **Google Cloud CDN**.
+
+Helpful Resources
+1. [Write-back vs Write-through caching](https://stackoverflow.com/questions/27087912/write-back-vs-write-through-caching)
+2. [Designing the Cache System](https://medium.com/@narengowda/designing-the-caching-system-e42c6938df6a#:~:text=In%20computing%2C%20a%20cache%20is%20a%20high%2Dspeed%20data%20storage,the%20data's%20primary%20storage%20location.)
+3. [System Design Basics: Getting started with Caching](https://towardsdatascience.com/system-design-basics-getting-started-with-caching-c2c3e934064a)
+4. [Caching: system design interview concepts (6 of 9)](https://igotanoffer.com/blogs/tech/caching-system-design-interview)
+5. [Cache Write Configurations](https://open-cas.github.io/cache_configuration.html#:~:text=Write%2DAround%20is%20similar%20to,not%20often%20subsequently%20re%2Dread.)
+6. [Example](./008-caching)
